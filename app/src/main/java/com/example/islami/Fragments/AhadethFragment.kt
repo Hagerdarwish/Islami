@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.islami.Adabters.HadethAdabter
 import com.example.islami.Models.HadethDataModel
 import com.example.islami.R
+import com.example.islami.databinding.FragmentAhadethBinding
 import com.google.android.material.datepicker.SingleDateSelector
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -16,20 +18,26 @@ import java.lang.Exception
 
 class AhadethFragment : Fragment() {
  var ahadeth = mutableListOf<HadethDataModel>()
-
+lateinit var binding: FragmentAhadethBinding
+    lateinit var adabter: HadethAdabter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ahadeth, container, false)
+        binding=FragmentAhadethBinding.inflate(inflater,container,false)
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         readHadeth()
+        initRecyclerview()
     }
-
+    private fun initRecyclerview() {
+        adabter=HadethAdabter(ahadeth)
+        binding.rvAhadeth.adapter=adabter
+    }
     private fun readHadeth():String {
         var fileContact =""
 

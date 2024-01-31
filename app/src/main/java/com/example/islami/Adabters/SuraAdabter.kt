@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.Adabters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.islami.R
 
 class SuraAdabter(val suraNameList:List<String>): Adapter<SuraAdabter.SuraViewHolder>() {
     class SuraViewHolder(item:View):ViewHolder(item){
@@ -20,7 +21,7 @@ class SuraAdabter(val suraNameList:List<String>): Adapter<SuraAdabter.SuraViewHo
     override fun getItemCount(): Int {
         return suraNameList.size
     }
-  var onSuraClick:OnItemClick?=null
+  var onSuraClick: OnItemClick?=null
     override fun onBindViewHolder(holder: SuraViewHolder, position: Int) {
         var suraList=suraNameList[position]
         holder.suraName.text=suraList

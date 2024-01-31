@@ -2,17 +2,14 @@ package com.example.islami.Fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.islami.Activities.DetailsQuranActivity
 import com.example.islami.Constants
-import com.example.islami.R
-import com.example.islami.SuraAdabter
+import com.example.islami.Adabters.SuraAdabter
 import com.example.islami.databinding.FragmentQuranBinding
-import java.util.Objects
 
 
 class QuranFragment : Fragment() {
@@ -31,7 +28,7 @@ lateinit var binding:FragmentQuranBinding
        super.onViewCreated(view, savedInstanceState)
         adabter= SuraAdabter(Constants.allSuraList)
 
-       adabter.onSuraClick=object:SuraAdabter.OnItemClick{
+       adabter.onSuraClick=object: SuraAdabter.OnItemClick{
            override fun onClick(suraItem: String, index: Int) {
 
                var intent=Intent(activity,DetailsQuranActivity::class.java)
