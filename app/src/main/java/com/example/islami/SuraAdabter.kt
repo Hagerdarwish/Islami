@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class SuraAdabter(val suraNameList:ArrayList<String>): Adapter<SuraAdabter.SuraViewHolder>() {
+class SuraAdabter(val suraNameList:List<String>): Adapter<SuraAdabter.SuraViewHolder>() {
     class SuraViewHolder(item:View):ViewHolder(item){
         var suraName:TextView=item.findViewById(R.id.tv_suraname_item)
     }
@@ -20,12 +20,13 @@ class SuraAdabter(val suraNameList:ArrayList<String>): Adapter<SuraAdabter.SuraV
     override fun getItemCount(): Int {
         return suraNameList.size
     }
- private var onSuraClick:OnItemClick?=null
+  var onSuraClick:OnItemClick?=null
     override fun onBindViewHolder(holder: SuraViewHolder, position: Int) {
         var suraList=suraNameList[position]
         holder.suraName.text=suraList
-        holder.itemView.setOnClickListener{
-            onSuraClick!!.onClick(suraList,position)
+       holder.itemView.setOnClickListener{
+
+           onSuraClick!!.onClick(suraList,position)
         }
     }
     interface OnItemClick{

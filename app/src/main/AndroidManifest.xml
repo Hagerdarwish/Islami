@@ -13,16 +13,23 @@
         android:theme="@style/Theme.Islami"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.HomeActivity"
+            android:name=".Activities.DetailsAhadethActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.SplashActivity"
-            android:exported="true" >
+            android:name=".Activities.DetailsQuranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

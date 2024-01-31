@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/sura_name"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line1" />
@@ -51,6 +51,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/sura_name_item"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
