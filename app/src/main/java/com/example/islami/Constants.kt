@@ -16,6 +16,9 @@ abstract class Constants {
       )
       val SURA_NAME="sura name"
       val SURA_INDEX="sura index"
+      val HADETH_TITLE="hadethTitle"
+      val HADETH_Content="hadethContent"
+      val HADETH_INDEX="hadethIndex"
    }
 
 }

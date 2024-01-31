@@ -1,12 +1,16 @@
 package com.example.islami.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.islami.Activities.DetailsAhadethActivity
+import com.example.islami.Activities.DetailsQuranActivity
 import com.example.islami.Adabters.HadethAdabter
+import com.example.islami.Constants
 import com.example.islami.Models.HadethDataModel
 import com.example.islami.R
 import com.example.islami.databinding.FragmentAhadethBinding
@@ -36,6 +40,19 @@ lateinit var binding: FragmentAhadethBinding
     }
     private fun initRecyclerview() {
         adabter=HadethAdabter(ahadeth)
+
+        adabter.hadethClick=object :HadethAdabter.onItemClick{
+            override fun onclick(list: HadethDataModel, index: Int) {
+                var intent=Intent(activity,DetailsAhadethActivity::class.java)
+                intent.putExtra(Constants.HADETH_TITLE,"${list.title}")
+                intent.putExtra(Constants.HADETH_Content,"${list.content}")
+                intent.putExtra(Constants.HADETH_INDEX,"${index}")
+                Log.e("ahadeth","list is ${list} and index is ${index}")
+                startActivity(intent)
+            }
+
+        }
+
         binding.rvAhadeth.adapter=adabter
     }
     private fun readHadeth():String {

@@ -33,7 +33,7 @@ class HadethAdabter( var hadethList:MutableList<HadethDataModel>): Adapter<Hadet
     }
 
     interface onItemClick{
-        fun onclick(title:HadethDataModel,index:Int)
+        fun onclick(list:HadethDataModel,index:Int)
     }
 
 
