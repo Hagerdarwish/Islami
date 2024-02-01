@@ -6,39 +6,71 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:textDirection="rtl"
-    android:padding="30dp"
+    android:padding="20dp"
     tools:context=".Activities.DetailsQuranActivity">
-    <TextView
 
-        android:id="@+id/tvsura_title"
-        android:layout_width="wrap_content"
-        android:text="SORA"
-        android:textSize="20dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:cardCornerRadius="01dp"
+       android:backgroundTint="#B5FFFFFF"
+
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-
-        <TextView
-            android:id="@+id/tvsura_ayat"
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvsura_title" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:background="#41C8B8B8"
 
-    </ScrollView>
+                android:id="@+id/tvsura_title"
+                android:layout_width="wrap_content"
+                android:text="@string/ahadeth"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:layout_height="wrap_content"
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:background="@color/light_primary"
+                android:padding="30dp"
+                android:layout_gravity="center"
+                />
+            <ScrollView
+
+                android:id="@+id/scrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <TextView
+
+                    android:id="@+id/tvsura_ayat"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textSize="22sp"
+                     />
+
+            </ScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+
 
 
 

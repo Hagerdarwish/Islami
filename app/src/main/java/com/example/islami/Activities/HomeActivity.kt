@@ -14,6 +14,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityHomeBinding.inflate(layoutInflater)
+        supportFragmentManager.beginTransaction().replace(R.id.fragment,QuranFragment(),"").commit()
+
         setContentView(binding.root)
         binding.bottomNavigationView.setOnItemSelectedListener {
             if(it.itemId==R.id.ic_quran){

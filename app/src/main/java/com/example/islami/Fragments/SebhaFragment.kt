@@ -26,7 +26,7 @@ class SebhaFragment : Fragment() {
         binding=FragmentSebhaBinding.inflate(layoutInflater,container,false)
         // Inflate the layout for this fragment
 
-        binding.frameAzkar.setOnClickListener{
+        binding.imgSebha.setOnClickListener{
             sebhaCounter()
             binding.tvCount.text=count++.toString()
             //  rotate the img

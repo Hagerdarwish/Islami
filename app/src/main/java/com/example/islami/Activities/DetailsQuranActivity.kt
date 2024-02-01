@@ -36,7 +36,7 @@ class DetailsQuranActivity : AppCompatActivity() {
             val inputStream=assets.open(sura_index)
             val reader = BufferedReader(InputStreamReader(inputStream))
             var filename = reader.readLines()
-            fileContact=filename.joinToString(){
+            fileContact=filename.joinToString(separator = " "){
                var index=filename.indexOf(it)
                 return@joinToString it +"{${++index}}"
             }
