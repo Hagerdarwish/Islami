@@ -27,7 +27,7 @@
 
                 android:id="@+id/tvhadeth_title"
                 android:layout_width="wrap_content"
-                android:text="@string/ahadeth"
+                android:text="@string/ahadeth_ar"
                 android:textSize="20dp"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"

@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/ic_quran"
     android:icon="@drawable/quran"
-    android:title="@string/quran" />
+    android:title="@string/quran_ar" />
     <item android:id="@+id/ic_ahadeth"
         android:icon="@drawable/ahadeth"
-        android:title="@string/ahadeth" />
+        android:title="@string/ahadeth_ar" />
     <item android:id="@+id/ic_sebha"
         android:icon="@drawable/sebha"
-        android:title="@string/sebha" />
+        android:title="@string/sebha_ar" />
     <item android:id="@+id/ic_radio"
         android:icon="@drawable/radio"
-        android:title="@string/radio" />
+        android:title="@string/radio_ar" />
 
 </menu>

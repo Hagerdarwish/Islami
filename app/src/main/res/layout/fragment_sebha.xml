@@ -32,7 +32,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
-           android:text="@string/count_the_azkar"
+           android:text="عدد التسبيحات"
            android:textSize="20dp"
            android:layout_marginTop="20dp"
            />
@@ -47,7 +47,7 @@
                android:id="@+id/tv_count"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="20"
+               android:text="0"
                android:textSize="20sp"
                />
        </FrameLayout>
@@ -63,7 +63,7 @@
                android:id="@+id/tv_azkar"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="sobhan allah"
+               android:text="سبحان الله"
                android:textSize="20sp"
                />
        </FrameLayout>

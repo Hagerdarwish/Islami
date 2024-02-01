@@ -8,4 +8,10 @@
     <string name="radio">Radio</string>
     <string name="count_the_azkar">Count the azkar</string>
     <string name="sura_name">sura name</string>
+    <string name="ahadeth_ar">احاديث</string>
+    <string name="sura_ar">السورة</string>
+    <string name="islami_ar">اسلامي</string>
+    <string name="radio_ar">راديو</string>
+    <string name="sebha_ar">سبحة</string>
+    <string name="quran_ar">قران</string>
 </resources>

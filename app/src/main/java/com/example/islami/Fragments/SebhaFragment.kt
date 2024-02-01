@@ -13,7 +13,7 @@ import com.example.islami.databinding.FragmentSebhaBinding
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 class SebhaFragment : Fragment() {
- var count:Int=0
+ var count:Int=1
     private val texts = arrayOf("سبحان الله", "الحمد لله", "الله أكبر")
     private var currentIndex = 0
    lateinit var binding: FragmentSebhaBinding
